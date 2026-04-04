@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "rappyyuwe.github.io/htb-walkthroughs",
+    baseUrl: "rappyyuwe.github.io/htb-walkthroughs/",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
