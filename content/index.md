@@ -1,5 +1,5 @@
 ---
-title: Welcome to Quartz
+title: Introduction
 ---
 # Hello World! This is my first HTB-related post
 
