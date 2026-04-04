@@ -10,7 +10,7 @@ Included is a very easy Linux machine that features exploiting TFTP, a vulnerabl
 
 ## Questions:
 
-1. What service is running on the target machine over UDP?
+Task 1: What service is running on the target machine over UDP?
 
 Ran command sudo nmap -sU 10.129.95.185
 
@@ -21,7 +21,9 @@ TFTP is the only service that is confirmed by nmap to be 'open' and not 'open|fi
 
 Ans: TFTP
 
-1. What class of vulnerability is the webpage that is hosted on port 80 vulnerable to?
+-----------
+
+Task 2: What class of vulnerability is the webpage that is hosted on port 80 vulnerable to?
 
 *A quick google search will lead you to the answer
 
@@ -29,13 +31,17 @@ Ans: Local File Inclusion
 
 Local File Inclusion (LFI) is a classic vulnerability tied to path execution and traversal in web servers like Apache. Attackers exploit improper path handling to include arbitrary files, sometimes leading to code execution if those files contain executable code.
 
-1. What is the default system folder that TFTP uses to store files?
+-------
+
+Task 3:  What is the default system folder that TFTP uses to store files?
 
 *A quick google search will lead you to the answer
 
 Ans: /var/lib/tftpboot/
 
-1. Which interesting file is located in the webserver folder and can be used for Lateral Movement?
+-------- 
+
+Task 4: Which interesting file is located in the webserver folder and can be used for Lateral Movement?
 
 Used gobuster on the target machine:
 
@@ -43,7 +49,9 @@ Used gobuster on the target machine:
 
 Ans: .htpasswd
 
-1. What is the group that user Mike is a part of and can be exploited for Privilege Escalation?
+---- 
+
+Task 5: What is the group that user Mike is a part of and can be exploited for Privilege Escalation?
 
 Local File Inclusion:
 
@@ -61,19 +69,26 @@ Note: The question is asking for GROUP and NOT groupid.
 
 Ans: lxd
 
-1. When using an image to exploit a system via containers, we look for a very small distribution. Our favourite for this task is named after mountains. What is that distribution name?
+----------
+
+Task 6: When using an image to exploit a system via containers, we look for a very small distribution. Our favourite for this task is named after mountains. What is that distribution name?
 
 *A quick google search will lead you to the answer
 
 Ans: Alpine
 
-1. What flag do we set to the container so that it has root privileges on the host system?
+------ 
+
+Task 7: What flag do we set to the container so that it has root privileges on the host system?
 
 *A quick google search will lead you to the answer. Just remember to add the term 'lxd', otherwise you'll repeatedly get --privileged which is not the answer.
 
 Ans: security.privileged=true
 
-1. If the root filesystem is mounted at /mnt in the container, where can the root flag be found on the container after the host system is mounted?
+
+---------- 
+
+Task 8: If the root filesystem is mounted at /mnt in the container, where can the root flag be found on the container after the host system is mounted?
 
 *No google search needed. Just good old logical guesswork.
 
@@ -211,6 +226,8 @@ c693d9c7499d9f572ee375d4c14c7bcf
 User Flag: a56ef91d70cfbf2cdb8f454c006935a1
 
 Root Flag: c693d9c7499d9f572ee375d4c14c7bcf
+
+
 
 *Explanation:
 
