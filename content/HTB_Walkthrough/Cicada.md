@@ -1,12 +1,10 @@
 
 ## 1. High Level Summary of Box
 
-### 1.1 About:
-<b>Machine Name</b>: Cicada
+<b>Machine Name</b>: Cicada 
 <b>IP Address</b>: 10.129.231.149
 <b>Domain</b>: cicada.htb0
 <b>Level of Access:</b> System/Root
-
 
 ## 2. Information Gathering & Enumeration
 
